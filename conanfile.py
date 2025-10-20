@@ -7,8 +7,8 @@ import os
 class Conan(ConanFile):
     settings = "build_type"
 
-    # def requirements(self):
-        # self.requires("opencv/4.12.0")
+    def requirements(self):
+        self.requires("opencv/4.12.0")
 
     def layout(self):
         cmake_layout(self)
@@ -31,5 +31,4 @@ class Conan(ConanFile):
 
     def package(self):
         cmake = CMake(self)
-        cmake.install()
-        
+        cmake.install()       
